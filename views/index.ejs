@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JD — Portfolio</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<div class="page-transition" aria-hidden="true">
+    <div class="transition-line"></div>
+</div>
+
+<body>
+
+    <header class="site-header">
+        <a href="/" class="logo">Eden./</a>
+
+       <nav class="navigation">
+
+    <a href="/" class="active">
+        Home
+    </a>
+
+    <a href="/about">
+        About
+    </a>
+
+    <a href="/projects">
+        Projects
+    </a>
+
+    <a href="/contact">
+        Contact
+    </a>
+
+</nav>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-label">
+                PORTFOLIO / 2026
+            </div>
+
+            <h1>
+                HELLO,<br>
+                I'M <span>EDEN.</span>
+            </h1>
+
+            <div class="hero-bottom">
+
+                <div class="hero-description">
+                    <p>
+                        Web developer and designer focused on
+                        building simple, functional, and thoughtful
+                        digital experiences.
+                    </p>
+                </div>
+
+                <div class="hero-links">
+                    <a href="/projects" class="button">
+                        VIEW WORK →
+                    </a>
+
+                    <a href="/about" class="text-link">
+                        ABOUT ME
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRO -->
+
+        <section class="intro">
+
+            <div class="section-number">
+                01
+            </div>
+
+            <div class="intro-content">
+
+                <p class="eyebrow">
+                    WHAT I DO
+                </p>
+
+                <h2>
+                    I BUILD DIGITAL
+                    EXPERIENCES THAT
+                    ARE SIMPLE BY DESIGN.
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- SELECTED WORK -->
+
+      <section class="projects-preview">
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            02
+        </div>
+
+        <h2>
+            SELECTED WORK
+        </h2>
+
+    </div>
+
+
+    <div class="project-list">
+
+        <% projects.forEach(project => { %>
+
+            <a
+                href="/projects/<%= project.id %>"
+                class="project-item"
+            >
+
+                <span class="project-number">
+                    <%= project.number %>
+                </span>
+
+                <span class="project-name">
+                    <%= project.title %>
+                </span>
+
+                <span class="project-tech">
+                    <%= project.technologies.slice(0, 3).join(" / ") %>
+                </span>
+
+                <span class="project-arrow">
+                    →
+                </span>
+
+            </a>
+
+        <% }) %>
+
+    </div>
+
+
+    <div class="projects-more">
+
+        <a href="/projects" class="text-link">
+            VIEW ALL PROJECTS →
+        </a>
+
+    </div>
+
+</section>
+
+        <!-- CONTACT -->
+
+        <section class="contact-preview">
+
+            <p class="eyebrow">
+                HAVE A PROJECT?
+            </p>
+
+            <h2>
+                LET'S BUILD
+                SOMETHING.
+            </h2>
+
+            <a href="/contact" class="button">
+                GET IN TOUCH →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <span>
+            © 2026 JD
+        </span>
+
+        <span>
+            BUILT WITH NODE.JS
+        </span>
+
+    </footer>
+
+    <div class="custom-cursor"></div>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>

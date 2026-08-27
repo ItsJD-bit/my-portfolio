@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        <%= project.title %> — JD
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="page-transition" aria-hidden="true">
+
+    <div class="transition-line"></div>
+
+</div>
+
+
+
+<header class="site-header">
+
+    <a href="/" class="logo">
+        JD/
+    </a>
+
+
+    <nav class="navigation">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/about">
+            About
+        </a>
+
+        <a href="/projects">
+            Projects
+        </a>
+
+        <a href="/contact">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main>
+
+
+<section class="project-detail-hero">
+
+
+    <div class="project-detail-meta">
+
+        <span>
+            <%= project.number %>
+        </span>
+
+        <span>
+            <%= project.year %>
+        </span>
+
+    </div>
+
+
+    <h1>
+
+        <%= project.title %>
+
+    </h1>
+
+
+</section>
+
+
+
+<section class="project-detail-content">
+
+
+    <div class="section-number">
+        01
+    </div>
+
+
+    <div class="project-detail-text">
+
+        <p class="eyebrow">
+            OVERVIEW
+        </p>
+
+        <p class="large-text">
+
+            <%= project.longDescription %>
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<section class="project-information">
+
+
+    <div class="project-info-block">
+
+        <span class="eyebrow">
+            ROLE
+        </span>
+
+        <p>
+            <%= project.role %>
+        </p>
+
+    </div>
+
+
+    <div class="project-info-block">
+
+        <span class="eyebrow">
+            TECHNOLOGIES
+        </span>
+
+        <p>
+
+            <%= project.technologies.join(" / ") %>
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<section class="project-features">
+
+
+    <div class="section-heading">
+
+        <div class="section-number">
+            02
+        </div>
+
+        <h2>
+            FEATURES
+        </h2>
+
+    </div>
+
+
+
+    <div class="feature-list">
+
+
+        <% project.features.forEach((feature, index) => { %>
+
+
+            <div class="feature-item">
+
+                <span>
+                    <%= String(index + 1).padStart(2, "0") %>
+                </span>
+
+                <strong>
+                    <%= feature %>
+                </strong>
+
+            </div>
+
+
+        <% }) %>
+
+
+    </div>
+
+
+</section>
+
+
+
+<section class="project-links">
+
+
+    <a
+        href="<%= project.github %>"
+        class="button"
+    >
+        GITHUB →
+    </a>
+
+
+    <a
+        href="<%= project.live %>"
+        class="button button-outline"
+    >
+        LIVE PROJECT →
+    </a>
+
+
+</section>
+
+
+
+<section class="back-projects">
+
+    <a href="/projects">
+
+        ← BACK TO PROJECTS
+
+    </a>
+
+</section>
+
+
+</main>
+
+
+
+<footer class="site-footer">
+
+    <span>
+        © 2026 JD
+    </span>
+
+    <span>
+        BUILT WITH NODE.JS
+    </span>
+
+</footer>
+
+
+<div class="custom-cursor"></div>
+<script src="/js/main.js"></script>
+
+</body>
+
+</html>

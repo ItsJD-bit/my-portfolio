@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Projects — JD</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="page-transition" aria-hidden="true">
+
+    <div class="transition-line"></div>
+
+</div>
+
+
+<header class="site-header">
+
+    <a href="/" class="logo">
+        JD/
+    </a>
+
+    <nav class="navigation">
+
+    <a href="/">
+        Home
+    </a>
+
+    <a href="/about">
+        About
+    </a>
+
+    <a href="/projects" class="active">
+        Projects
+    </a>
+
+    <a href="/contact">
+        Contact
+    </a>
+
+</nav>
+
+</header>
+
+
+
+<main>
+
+
+<section class="page-hero">
+
+    <div class="hero-label">
+        WORK / 02
+    </div>
+
+    <h1>
+        SELECTED<br>
+        PROJECTS.
+    </h1>
+
+</section>
+
+
+
+<section class="project-page-list">
+
+
+<% projects.forEach(project => { %>
+
+
+    <a
+        href="/projects/<%= project.id %>"
+        class="project-card"
+    >
+
+        <div class="project-meta">
+
+            <span>
+                <%= project.number %>
+            </span>
+
+            <span>
+                <%= project.year %>
+            </span>
+
+        </div>
+
+
+        <div class="project-info">
+
+            <h2>
+                <%= project.title %>
+            </h2>
+
+            <p>
+                <%= project.description %>
+            </p>
+
+            <div class="project-stack">
+
+                <%= project.technologies.join(" / ") %>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-action">
+
+            →
+
+        </div>
+
+    </a>
+
+
+<% }) %>
+
+
+</section>
+
+
+</main>
+
+
+
+<footer class="site-footer">
+
+    <span>
+        © 2026 JD
+    </span>
+
+    <span>
+        BUILT WITH NODE.JS
+    </span>
+
+</footer>
+
+
+<div class="custom-cursor"></div>
+<script src="/js/main.js"></script>
+
+</body>
+
+</html>
