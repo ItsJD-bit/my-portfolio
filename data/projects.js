@@ -100,8 +100,8 @@ const projects = [
             "Typography-focused layout"
         ],
 
-        github: "#",
-        live: "#"
+        github: "https://github.com/ItsJD-bit/my-portfolio.git",
+        live: "https://edenisme.onrender.com/"
     }
 ];
 
